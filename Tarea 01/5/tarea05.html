@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0"/>
+    <link rel="stylesheet" type="text/css" href="tarea05.css"/>
+    <title>Tarea 01</title>
+</head>
+<body>
+    <nav> <a href="../index.html">Inicio</a> |
+        <a href="../1/tarea01.html">Tarea 01</a> | <a href="../2/tarea02.html">Tarea 02</a> |
+        <a href="../3/tarea03.html">Tarea 03</a> | <a href="../4/tarea04.html">Tarea 04</a> |
+        <a class="activo" href="tarea05.html">Tarea 05</a>
+    </nav>
+    <h1>Esto es la página de la Tarea 05.</h1>
+
+    <h2><strong>Apartado A: ¿Qué es un control de versiones? ¿Qué diferencias hay entre uno centralizado y otro distribuido?</strong></h2>
+
+    <p><strong>¿Que es un control de versiones?</strong></p>
+
+    <p>Los sistemas de control de versiones son software que ayudan a realizar un seguimiento de los cambios realizados en el código a lo largo del tiempo. 
+        A medida que un desarrollador edita el código, el sistema de control de versiones toma una instantánea de los archivos. 
+        Después, guarda esa instantánea de forma permanente para que se pueda recuperar más adelante si es necesario.
+    </p>
+
+    <p>
+        Sin control de versiones, los desarrolladores tienen la tentación de mantener varias copias de código en su equipo. Esto es peligroso porque es fácil cambiar o 
+        eliminar un archivo en la copia incorrecta del código, lo que podría perder trabajo. Los sistemas de control de versiones resuelven este problema administrando 
+        todas las versiones del código, pero presentando al equipo una sola versión a la vez.
+    </p>
+
+    <p><strong>¿Qué diferencias hay entre uno centralizado y otro distribuido?</strong></p>
+
+    <p>
+        Los sistemas de control de versiones centralizados (Centralized Version Control Systems o CVCSs en inglés). Estos sistemas, como CVS, Subversion y Perforce, 
+        tienen un único servidor que contiene todos los archivos versionados, y varios clientes que descargan los archivos de ese lugar central. Durante muchos años, 
+        éste ha sido el estándar para el control de versiones, esta configuración ofrece muchas ventajas, especialmente frente a VCSs locales. 
+        Por ejemplo, todo el mundo sabe hasta cierto punto en qué está trabajando el resto de gente en el proyecto. 
+        Los administradores tienen control detallado de qué puede hacer cada uno; y es mucho más fácil administrar un CVCS que tener que lidiar con bases de datos 
+        locales en cada cliente.
+    </p>
+
+    <p>
+        Sin embargo, esta configuración también tiene serias desventajas. La más obvia es el punto único de fallo que representa el servidor centralizado. 
+        Si ese servidor se cae durante una hora, entonces durante esa hora nadie puede colaborar o guardar cambios versionados de aquello en que están trabajando. 
+        Si el disco duro en el que se encuentra la base de datos central se corrompe, y no se han llevado copias de seguridad adecuadamente, se pierde absolutamente 
+        todo, toda la historia del proyecto salvo aquellas instantáneas que la gente pueda tener en sus máquinas locales.
+    </p>
+
+    <p>
+        Es aquí donde entran los sistemas de control de versiones distribuidos (Distributed Version Control Systems o DVCSs en inglés). 
+        En un DVCS (como Git, Mercurial, Bazaar o Darcs), los clientes no sólo descargan la última instantánea de los archivos sino que replican completamente el 
+        repositorio. Así, si un servidor muere, y estos sistemas estaban colaborando a través de él, cualquiera de los repositorios de los clientes puede copiarse 
+        en el servidor para restaurarlo. Cada vez que se descarga una instantánea, en realidad se hace una copia de seguridad completa de todos los datos.
+    </p>
+
+    <p>
+        Es más, muchos de estos sistemas se las arreglan bastante bien teniendo varios repositorios con los que trabajar, por lo que se puede colaborar con distintos 
+        grupos de gente de maneras distintas simultáneamente dentro del mismo proyecto. Esto permite establecer varios tipos de flujos de trabajo que no son posibles 
+        en sistemas centralizados, como pueden ser los modelos jerárquicos.
+    </p>
+
+    <h2><strong>Apartado B: ¿Qué es Git? ¿Y GitHub? ¿En qué se diferencian y cómo se relacionan entre sí?</strong></h2>
+
+    <p><strong>¿Qué es Git?</strong></p>
+
+    <p>
+        Git es un sistema de control de versiones distribuido, lo que significa que un clon local del proyecto es un repositorio de control de versiones completo. 
+        Estos repositorios locales plenamente funcionales permiten trabajar sin conexión o de forma remota con facilidad. Los desarrolladores confirman su trabajo 
+        localmente y, a continuación, sincronizan su copia del repositorio con la copia en el servidor. Este paradigma es distinto del control de versiones 
+        centralizado, donde los clientes deben sincronizar el código con un servidor antes de crear nuevas versiones.
+    </p>
+
+    <p><strong>¿Qué es GitHub?</strong></p>
+
+    <p>
+        GitHub es un servicio basado en la nube que aloja un sistema de control de versiones (VCS) llamado Git. Éste permite a los desarrolladores colaborar y 
+        realizar cambios en proyectos compartidos, a la vez que mantienen un seguimiento detallado de su progreso.
+    </p>
+
+    <h2><strong>Apartado C: ¿Qué es Git? ¿Y GitHub? ¿En qué se diferencian y cómo se relacionan entre sí?</strong></h2>
+
+    <p>Ya poseo una cuenta de GitHub que nos pidieron como actividad en el curso pasado para Entornos de Desarrollo, este sería mi GitHub <a href="https://github.com/Arioch22" target="_blank" title="Dirección GitHub">@Arioch22 </a></p>
+
+
+
+
+    
+
+
+
+
+    <footer>
+        <a href="../index.html" class="colorFooter">Tarea creada por Manuel Monterroso Flores</a>
+    </footer>
+
+</body>
+</html>

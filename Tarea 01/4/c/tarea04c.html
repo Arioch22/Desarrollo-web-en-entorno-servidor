@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0"/>
+    <link rel="stylesheet" type="text/css" href="tarea04c.css"/>
+    <title>Tarea 04 C</title>
+</head>
+<body>
+
+    <form action="informe.php" method="post">
+        <h3>Creador de informes de salud.</h3>
+        <p>Introduzca sus datos y pulse "Enviar".</p>
+        <p>Sexo:
+            <input type="radio" name="sexo" value="hombre" required> Hombre
+            <input type="radio" name="sexo" value="mujer" required> Mujer
+        </p>
+        <p>
+            <input type="number" name="edad"    placeholder="Edad" min="1" max="100" required>
+        </p>
+        <p>
+            <!--He puesto de altura máxima 2.72m porque es la altura oficial mas alta registrada en una persona, Robert Wadlow-->
+            <input type="number" name="altura"  step="0.01"  placeholder="Altura (m)" min="0.50" max="2.72" required>
+        </p>
+        <p>
+            <!--He puesto de peso máximo 635kg que es el peso mayor registrado en una persona en el mundo, Jon Brower Minnoch-->
+            <input type="number" name="peso"  step="0.01"  placeholder="Peso (Kg)" min="0" max="634.99" required>
+        </p>
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Borrar">
+        </p>
+    </form>
+</body>
+</html>

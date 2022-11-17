@@ -1,0 +1,79 @@
+body{
+    max-width: 300mm;
+    margin: 0 auto;
+    padding: 0 1em;
+    font-family: 'Segoe UI', 'Open Sans', Tahoma, Geneva, Verdana, sans-serif;
+    
+}
+
+
+nav {
+    text-align: center;
+    font-size: xx-large;
+    padding-top: 50px;
+}
+
+a{
+    text-decoration: none;
+}
+a:hover {
+    
+    color: burlywood;
+}
+
+.activo {
+    color: brown;
+}
+
+h1 {
+    padding-top: 50px;
+    text-align: center;
+    font-size: 50px;
+    color: cornflowerblue;
+}
+
+h2 {
+    text-align: center;
+    color: cornflowerblue;
+    font-size: 35px;
+}
+
+hr {
+    height: 6px;
+    max-width: 200mm;
+    background-color: cornflowerblue;
+}
+p{
+    text-align: center;
+    max-width: 200mm;
+    padding-left: 50mm;
+    padding-right: 50mm;
+    padding-top: 10px;
+    font-size: 20px;
+}
+
+img{
+    display:block;
+    margin:auto;
+    width: 200mm;
+    }
+
+span {
+    color: cornflowerblue;
+}
+
+footer{
+    text-decoration: none;
+    text-align: center;
+    background-color: gray;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    left:0px;
+    bottom:0px;
+    height:30px;
+    width:100%;
+}
+
+.colorFooter {
+    color: orange;
+}

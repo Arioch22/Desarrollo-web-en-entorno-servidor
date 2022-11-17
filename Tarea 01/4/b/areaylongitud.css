@@ -1,0 +1,11 @@
+body{
+    max-width: 300mm;
+    margin: 0 auto;
+    padding: 0 1em;
+    font-family: 'Segoe UI', 'Open Sans', Tahoma, Geneva, Verdana, sans-serif;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-49%, -49%);
+}
+

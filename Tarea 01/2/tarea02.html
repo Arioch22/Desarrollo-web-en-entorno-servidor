@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0"/>
+        <link rel="stylesheet" type="text/css" href="/2/tarea02.css"/>
+        <title>Tarea 02</title>
+    </head>
+<body>
+
+    
+    <nav> <a href="../index.html">Inicio</a> |
+        <a href="../1/tarea01.html">Tarea 01</a> | <a class="activo" href="tarea02.html">Tarea 02</a> |
+        <a href="../3/tarea03.html">Tarea 03</a> | <a href="../4/tarea04.html">Tarea 04</a> |
+        <a href="../5/tarea05.html">Tarea 05</a>
+    </nav>
+    <h1>
+        Esto es la página de la Tarea 02.
+    </h1>
+
+    <h2>
+        Tutorial de instalación de XAMPP en una distribución de Arch Linux.
+    </h2>
+
+    <p>
+        Lo primero será instalar el paquete a través de la consola de comandos, como este no se encuentra en los repositorios oficiales de archivo
+        lo instalaremos por los repositorios de los usuarios que es comonocido como AUR.
+    </p>
+
+    
+    <img src="img/instalacion_yay_xampp.png" alt="Intalación xampp."/>
+    
+    <p>
+        Como podemos observar en la imagen con el comando de yay hacemos la búsqueda del paquete y nos da una lista de los que encuentra, como solo
+        es un solo paquete nos da solo la opción de 1 para la instalación.
+    </p>
+
+    <hr/>
+
+
+    
+    <img class="paddingsuperior" src="img/final_instalacion_xampp.png" alt="final instalación xampp."/>
+    
+
+    <p>
+        En esta imagen podemos observar que se ha podido instalar el paquete sin ningún error e indicandonos como podemos iniciar ahora el servicio,
+        como pararlo o reiniciarlo con los comandos <strong>sudo xampp {start, stop, restart}</strong> aunque también nos indica que se puede usar
+        los comandos de systemd, por tanto, se podrá usar el comando sudo systemctl {start, stop, restart}.
+        También indica que para poder ver si funciona la instalación que cuando lo iniciemos nos vayamos a la página http://localhost
+    </p>
+    
+    <hr/>
+    
+    <img class="paddingsuperior" src="img/inicio_servicio_de_xampp.png" alt="inicio servicio de xampp."/>
+    
+    <p>
+        En esta imagen observamos como iniciamos el servicio de XAMPP con el comando <strong>sudo xampp start</strong>.
+    </p>
+
+    
+    <hr/>
+
+    <img class="paddingsuperior" src="img/capturacion_con_localhost_de_xampp.png" alt="localhost de xampp."/>
+    
+    <p>
+        Y ya para comprobar que se ha iniciado correctamente xampp abrimos el navegador que queramos e introducimos la dirección de 
+        <span>http: //localhost</span>
+    </p>
+
+    <h2>
+        Tutorial de como ejecutar código PHP puro y código PHP embebido en una página XHTML y CSS.
+    </h2>
+
+    <p>
+        Para utilizar código PHP dentro de nuestra página web hay dos maneras, una es incrustar el código PHP en el archivo HTML en sí con la extensión html y la 
+        otra opción, que es la forma preferida, es combinar las etiquetas de PHP y HTML en archivos php.
+    </p>
+
+    <p>
+        Ya que PHP es un lenguaje de scripting del lado del servidor, el código se interpreta y ejecuta del lado del servidor. 
+        Por ejemplo, si agregas el siguiente código a tu archivo index.html, este no se ejecutará correctamente de manera inmediata.
+    </p>
+
+    <div>
+        <table aria-describedby="Ejemplo de php">
+            <tbody>
+                <tr>
+                    <td class="tablaejemplophp">
+                        <div>01</div>
+                        <div>02</div>
+                        <div>03</div>
+                        <div>04</div>
+                        <div>05</div>
+                        <div>06</div>
+                        <div>07</div>
+                        <div>08</div>
+                        <div>09</div>
+                    </td>
+                    <td>
+                        <div class="codigo">
+                            <div>
+                                <code>&lt;!DOCTYPE html&gt;</code>
+                            </div>
+                            <div>
+                                <code>&lt;html&gt;</code>
+                            </div>
+                            <div>
+                                <code>&nbsp;&nbsp;</code>
+                                <code>&lt;head&gt;</code>
+                            </div>
+                            <div>
+                                <code>&nbsp;&nbsp;&nbsp;&nbsp;</code>
+                                <code>&lt;title&gt;Embed PHP in a .html File&lt;/title&gt;</code>
+                            </div>
+                            <div>
+                                <code>&nbsp;&nbsp;</code>
+                                <code>&lt;/head&gt;</code>
+                            </div>
+                            <div>
+                                <code>&nbsp;&nbsp;</code>
+                                <code>&lt;body&gt;</code>
+                            </div>
+                            <div>
+                                <code>&nbsp;&nbsp;&nbsp;&nbsp;</code>
+                                <code>&lt;h1&gt;&lt;?php </code>
+                                <code>echo</code> 
+                                <code>"Hello World"</code>
+                                <code>?&gt;&lt;/h1&gt;</code>
+                            </div>
+                            <div>
+                                <code>&nbsp;&nbsp;</code>
+                                <code>&lt;/body&gt;</code>
+                            </div>
+                            <div>
+                                <code>&lt;/html&gt;</code>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <p>
+        El ejemplo anterior muestra el siguiente resultado en tu navegador:
+        <br/>
+        <code class="ejemplo">
+            &lt;?php echo "Hello World" ?&gt;
+        </code>
+    </p>
+
+    <p>
+        Entonces, como podemos ver, las etiquetas PHP del documento .html no son detectadas de forma predeterminada, y simplemente son consideradas 
+        como texto sin formato que se muestra sin ser analizado. Eso se debe a que el servidor usualmente se configura para ejecutar PHP solamente en 
+        los archivos con la extensión .php.
+    </p>
+
+    <p>
+        Si quieres ejecutar tus archivos HTML como PHP, puedes indicarle a tu servidor que ejecute tus archivos .html como archivos PHP, pero una 
+        idea mucho mejor es colocar tu código PHP y HTML mezclado en un archivo con la extensión .php.
+    </p>
+
+    <p>
+        Cuando se trata de integrar código PHP con contenido HTML, se debe encerrar el código PHP con la etiqueta de inicio <strong>&lt;?php</strong>
+        y la etiqueta de cierre <strong>?&gt;</strong> de PHP. El código envuelto entre estas dos etiquetas se considera código PHP y, por lo tanto, será ejecutado en el lado del servidor antes de que el archivo solicitado se envíe al navegador del cliente.
+    </p>
+
+    <p>
+        Veamos un ejemplo muy sencillo que muestra un mensaje usando código PHP. Crea el archivo index.php con el siguiente contenido dentro de 
+        la raíz de tu documento.
+    </p>
+
+    <div>
+        <div>
+            <table aria-describedby="Ejemplo de php combinado con código HTML.">
+                <tbody>
+                    <tr>
+                        <td class="tablaejemplophp">
+                            <div>01</div>
+                            <div>02</div>
+                            <div>03</div>
+                            <div>04</div>
+                            <div>05</div>
+                            <div>06</div>
+                            <div>07</div>
+                            <div>08</div>
+                            <div>09</div>
+                        </td>
+                        <td>
+                            <div class="codigo">
+                                <div>
+                                    <code>&lt;!DOCTYPE html&gt;</code>
+                                </div>
+                                <div>
+                                    <code>&lt;html&gt;</code>
+                                </div>
+                                <div>
+                                    <code>&nbsp;&nbsp;</code>
+                                    <code>&lt;head&gt;</code>
+                                </div>
+                                <div>
+                                    <code>&nbsp;&nbsp;&nbsp;&nbsp;</code>
+                                    <code>&lt;title&gt;How to put PHP in HTML - Simple Example&lt;/title&gt;</code>
+                                </div>
+                                <div>
+                                    <code>&nbsp;&nbsp;</code>
+                                    <code>&lt;/head&gt;</code>
+                                </div>
+                                <div>
+                                    <code>&nbsp;&nbsp;</code>
+                                    <code>&lt;body&gt;</code>
+                                </div>
+                                <div>
+                                    <code>&nbsp;&nbsp;&nbsp;&nbsp;</code>
+                                    <code>&lt;h1&gt;&lt;?php </code>
+                                    <code>echo</code>
+                                    <code>"This message is from server side."</code>
+                                    <code>?&gt;&lt;/h1&gt;</code>
+                                </div>
+                                <div>
+                                    <code>&nbsp;&nbsp;</code>
+                                    <code>&lt;/body&gt;</code>
+                                </div>
+                                <div>
+                                    <code>&lt;/html&gt;</code>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <p>
+        El resultado del ejemplo anterior se ve así:
+    </p>
+
+    <br/>
+
+    <img src="img/captura_con_codigo_php.png" alt="captura código php."/>
+
+    <p>
+        Y, si observamos el código fuente de la página, este debería verse así:
+    </p>
+
+    <img src="img/captura_con_codigo_php_navegador.png" alt="captura código php en navegador."/>
+    <br/>
+
+    <p>
+        Como podemos ver, el código PHP se analiza y se ejecuta del lado del servidor, y se mezcla con HTML, antes de que la página sea enviada al navegador del cliente.
+    </p>
+
+    <p>
+        La estructura general de la pagina PHP combinada con código HTML y PHP debería verse de la siguiente forma:
+    </p>
+
+    <div>
+        <div>
+            <table aria-describedby="Ejemplo de php">
+                <tbody>
+                    <tr>
+                        <td class="tablaejemplophp">
+                            <div>01</div>
+                            <div>02</div>
+                            <div>03</div>
+                            <div>04</div>
+                            <div>05</div>
+                            <div>06</div>
+                            <div>07</div>
+                            <div>08</div>
+                            <div>09</div>
+                            <div>10</div>
+                            <div>11</div>
+                            <div>12</div>
+                            <div>13</div>
+                            <div>14</div>
+                        </td>
+                        <td>
+                            <div class="codigo">
+                                <div>
+                                    <code>&lt;!DOCTYPE html&gt;</code>
+                                </div>
+                                <div>
+                                    <code>&lt;html&gt;</code>
+                                </div>
+                                <div>
+                                    <code>&nbsp;&nbsp;</code>
+                                    <code>&lt;head&gt;</code>
+                                </div>
+                                <div>
+                                    <code>&nbsp;&nbsp;&nbsp;&nbsp;</code>
+                                    <code>&lt;title&gt;...&lt;/title&gt;</code>
+                                </div>
+                                <div>
+                                    <code>&nbsp;&nbsp;</code>
+                                    <code>&lt;/head&gt;</code>
+                                </div>
+                                <div>
+                                    <code>&nbsp;&nbsp;</code>
+                                    &nbsp;
+                                </div>
+                                <div>
+                                    <code>&nbsp;&nbsp;</code>
+                                    <code>&lt;body&gt;</code>
+                                </div>
+                                <div>
+                                    <code>&nbsp;&nbsp;&nbsp;&nbsp;</code>
+                                    <code>HTML...</code>
+                                </div>
+                                <div>
+                                    <code>&nbsp;&nbsp;&nbsp;&nbsp;</code>
+                                    <code>&lt;?php PHP code ... ?&gt;</code>
+                                </div>
+                                <div>
+                                    <code>&nbsp;&nbsp;&nbsp;&nbsp;</code>
+                                    <code>HTML...</code>
+                                </div>
+                                <div>
+                                    <code>&nbsp;&nbsp;&nbsp;&nbsp;</code>
+                                    <code>&lt;?php PHP code ... ?&gt;</code>
+                                </div>
+                                <div>
+                                    <code>&nbsp;&nbsp;&nbsp;&nbsp;</code>
+                                    <code>HTML...&nbsp; </code>
+                                </div>
+                                <div>
+                                    <code>&nbsp;&nbsp;</code>
+                                    <code>&lt;/body&gt;</code>
+                                </div>
+                                <div>
+                                    <code>&lt;/html&gt;</code>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <p>
+        Luego también tenemos la posibilidad de ejecutar un archivo con solo código php, consiste en ejecutarlo por consola, veamos un ejemplo.
+    </p>
+
+    <p>
+        Primero creamos un archivo con la extensión .php, con una estructua como esta:
+    </p>
+
+    <div>
+        <div>
+            <table aria-describedby="Ejemplo de php">
+                <tbody>
+                    <tr>
+                        <td class="tablaejemplophp">
+                            <div>01</div>
+                            <div>02</div>
+                            <div>03</div>
+                            <div>04</div>
+                        </td>
+                        <td>
+                            <div class="codigo">
+                                <div>
+                                    <code>&lt;?php;</code>
+                                </div>
+                                <div>
+                                    <code>echo "\nMensaje de prueba de PHP para ejecutar por consola.\n"; </code>
+                                </div>
+                                <div>
+                                    <code>echo "\nCreado por Manuel Monterroso Flores.\n";</code>
+                                </div>
+                                <div>
+                                    <code>?&gt;</code>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <p>
+        Y ahora mostramos como ejecutarlo por consola y la salida que genera.
+    </p>
+
+    <img src="img/captura_php_en_terminal.png" alt="captura php en terminal."/>
+    <br/>
+
+    <p>
+        Claramente para poder ejecutar este código tendremos que tener instalado PHP en el equipo.
+    </p>
+
+
+
+    <footer>
+        <a href="../index.html" class="colorFooter">Tarea creada por Manuel Monterroso Flores</a>
+    </footer>
+
+</body>
+</html>

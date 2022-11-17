@@ -1,0 +1,63 @@
+body{
+    max-width: 300mm;
+    margin: 0 auto;
+    padding: 0 1em;
+    font-family: 'Segoe UI', 'Open Sans', Tahoma, Geneva, Verdana, sans-serif;
+    
+}
+
+nav {
+    text-align: center;
+    font-size: xx-large;
+    padding-top: 50px;
+}
+
+a{
+    text-decoration: none;
+}
+
+a.activo {
+    color: brown;
+}
+
+a:hover {
+    
+    color: burlywood;
+}
+
+
+div#salida {
+    max-width: 300mm;
+    border:4px solid #f6f6f6;
+    background-color: black;
+    text-align: center;
+
+}
+
+p {
+    text-align: center;
+    color: cornflowerblue;
+    
+}
+
+p#texto {
+    padding-left: 25mm;
+    padding-right: 25mm;
+    max-width: 250mm;
+    color: cornflowerblue;
+}
+
+footer{
+    text-decoration: none;
+    text-align: center;
+    background-color: gray;
+    padding-top: 25px;
+    padding-bottom: 52px;
+    left:0px;
+    bottom:0px;
+    height:30px;
+}
+
+.colorFooter {
+    color: orange;
+}

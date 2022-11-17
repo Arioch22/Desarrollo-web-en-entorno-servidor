@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0"/>
+    <link rel="stylesheet" type="text/css" href="tarea03b.css"/>
+    <script src="//code.jquery.com/jquery-1.6.4.js"></script>
+    <title>Tarea 03 Apartado B</title>
+</head>
+
+<body>
+  
+
+
+  <nav> <a href="../../index.html">Inicio</a> |
+    <a href="../../1/tarea01.html">Tarea 01</a> | <a href="../../2/tarea02.html">Tarea 02</a> |
+    <a href="../tarea03.html">Tarea 03</a> | <a href="../../4/tarea04.html">Tarea 04</a> |
+    <a href="../../5/tarea05.html">Tarea 05</a>
+  </nav>
+  <h1>Esto es la página del apartado B de la Tarea 03.</h1>
+  
+  <form action="cv.php" method="post">
+    <fieldset>
+      <p>Datos Personales.</p>
+      <input class="personales" type="text" name="nombre" size="1"  placeholder="Nombre y apellidos (requerido)" required />
+      <input class="personales" type="email" name="correo"  placeholder="Correo Electrónico (requerido)" required />
+      <input class="personales" type="tel" name="telefono"  placeholder="Teléfono (requerido)" required />
+      <input class="personales" type="url" name="web"  placeholder="Sitio web personal (opcional)" />
+    </fieldset>
+
+    <fieldset>
+      <p>Dirección</p>
+      <input class="direccion" type="text" name="direccion" placeholder="Dirección" required />
+      <input class="direccion" type="number" name="numero" placeholder="Número" min="1"/>
+      <input class="direccion" type="text" name="localidad" placeholder="Localidad" />
+      <select class="direccion" name="provincia">
+        <option value="">- Provincia -</option>
+        <option value="La Coruña">La coru&#241;a</option>
+        <option value="Álava">&#193;lava</option>
+        <option value="Albacete">Albacete</option>
+        <option value="Alicante">Alicante</option>
+        <option value="Almería">Almer&#237;a</option>
+        <option value="Asturias">Asturias</option>
+        <option value="Ávila">&#193;vila</option>
+        <option value="Badajoz">Badajoz</option>
+        <option value="Baleares">Baleares</option>
+        <option value="Barcelona">Barcelona</option>
+        <option value="Burgos">Burgos</option>
+        <option value="Cáceres">C&#225;ceres</option>
+        <option value="Cádiz">C&#225;diz</option>
+        <option value="Cantabria">Cantabria</option>
+        <option value="Castellón">Castell&#243;n</option>
+        <option value="Ceuta">Ceuta</option>
+        <option value="Ciudad Real">Ciudad Real</option>
+        <option value="Córdoba">C&#243;rdoba</option>
+        <option value="Cuenca">Cuenca</option>
+        <option value="Extranjero">Extranjero</option>
+        <option value="Gerona">Girona</option>
+        <option value="Granada">Granada</option>
+        <option value="Guadalajara">Guadalajara</option>
+        <option value="Guipúzoa">Guip&#250;zcoa</option>
+        <option value="Huelva">Huelva</option>
+        <option value="Huesca">Huesca</option>
+        <option value="Jaén">Ja&#233;n</option>
+        <option value="La rioja">La rioja</option>
+        <option value="Las palmas">Las palmas</option>
+        <option value="León">Le&#243;n</option>
+        <option value="Lleida">Lleida</option>
+        <option value="Lugo">Lugo</option>
+        <option value="Madrid">Madrid</option>
+        <option value="Málaga">M&#225;laga</option>
+        <option value="Melilla">Melilla</option>
+        <option value="Murcia">Murcia</option>
+        <option value="Navarra">Navarra</option>
+        <option value="Ourense">Ourense</option>
+        <option value="Palencia">Palencia</option>
+        <option value="Pontevedra">Pontevedra</option>
+        <option value="Salamanca">Salamanca</option>
+        <option value="Santa cruz de tenerife">Santa cruz de tenerife</option>
+        <option value="Segovia">Segovia</option>
+        <option value="Sevilla">Sevilla</option>
+        <option value="Soria">Soria</option>
+        <option value="Tarragona">Tarragona</option>
+        <option value="Teruel">Teruel</option>
+        <option value="Toledo">Toledo</option>
+        <option value="Valencia">Valencia</option>
+        <option value="Valladolid">Valladolid</option>
+        <option value="Vizcaya">Vizcaya</option>
+        <option value="Zamora">Zamora</option>
+        <option value="Zaragoza">Zaragoza</option>
+        </select>
+    </fieldset>
+
+    <fieldset>
+      <p>Descripción personal</p>
+      <textarea class="experiencia" name="descripcion_personal" placeholder="Diga una pequeña descripción personal en 600 carácteres. " maxlength="600" required></textarea>
+
+    </fieldset>
+
+    <fieldset class="contenedor">
+      <p>Estudios #01</p>
+      <input class="estudios" type="text" name="estudios[0][escuela]" placeholder="Instituto/Universidad" required />
+      <input class="estudios" type="text" name="estudios[0][titulo]" placeholder="Titulación" required />
+      <input class="anoinicio" type="number" name="estudios[0][anoinicio]" placeholder="Año inicio" min="1950" max="2022" required />
+      <input class="anofinal" type="number" name="estudios[0][anofinal]" placeholder="Año final" min="1950" max="2022" required />
+      <div id="nuevo_campo"><p>Agregar Estudio</p></div>
+      <div id="campos"></div>
+    </fieldset>
+
+    <fieldset>
+      <p>Experiencia #01</p>
+      <input class="experiencia" type="text" name="experiencia[0][empresa]" placeholder="Nombre Empresa" required />
+      <input class="experiencia" type="text" name="experiencia[0][trabajo]" placeholder="Puesto de trabajo" required />
+      <input  type="number" name="experiencia[0][anoinicio]" placeholder="Año inicio" class="experienciaano" min="1950" max="2022" required />
+      <input  type="number" name="experiencia[0][anofinal]" placeholder="Año final" class="experienciaano" min="1950" max="2022" required />
+      <br/>
+      <textarea class="experiencia" name="experiencia[0][descripcion]" placeholder="Diga las funciones de su puesto de trabajo en 600 carácteres. " maxlength="600" required></textarea>
+      
+      
+      <div id="nuevo_campo2"><p>Agregar Experiencia</p></div>
+      <div id="campos2"></div>
+    </fieldset>
+    <p>
+      <input type="submit" value="Enviar"/>
+      <input type="reset" value="Borrar"/>
+    </p>
+
+  </form>
+
+  <br/>
+  <script>//<![CDATA[
+
+
+    var nextinput = 1;
+    var nextarray = 0;
+    
+    $("#nuevo_campo").click(function(e) {
+        nextinput++;
+        nextarray++;
+        var campo = '<div style="color:black;background-color:#ccc;"><p>Estudios #0'+nextinput+'</p> <input class="estudios" type="text" name="estudios['+nextarray+'][escuela]" placeholder="Instituto/Universidad" required /> <input class="estudios" type="text" name="estudios['+nextarray+'][titulo]" placeholder="Titulación" required /> <input style="width: 8%;" class="estudios" type="number" name="estudios['+nextarray+'][anoinicio]" placeholder="Año inicio" min="1950" required /> <input style="width: 8%;" class="estudios" type="number" name="estudios['+nextarray+'][anofinal]" placeholder="Año final" min="1950" required /></div>'
+        $("#campos").append(campo);
+    });
+    
+    
+      //]]></script>
+  
+      <script>//<![CDATA[
+  
+  
+        var nextinput2 = 1;
+        var nextarray2 = 0;
+        
+        $("#nuevo_campo2").click(function(e) {
+            nextinput2++;
+            nextarray2++;
+            var campo = '<p>Experiencia #0'+nextinput2+'</p> <input class="experiencia" type="text" name="experiencia['+nextarray2+'][empresa]" placeholder="Nombre Empresa"  />  <input class="experiencia" type="text" name="experiencia['+nextarray2+'][trabajo]" placeholder="Puesto de trabajo"/> <input type="number" min="1950" max="2022" name="experiencia['+nextarray2+'][anoinicio]" placeholder="Año inicio" class="experienciaano"  /> <input type="number" min="1950" max="2022" name="experiencia['+nextarray2+'][anofinal]" placeholder="Año final" class="experienciaano"  /> <br/> <textarea class="experiencia" type="text" name="experiencia['+nextarray2+'][descripcion]" placeholder="Diga las funciones de su puesto de trabajo en 600 carácteres. " maxlength="600" ></textarea>'
+            $("#campos2").append(campo);
+        });
+        
+        
+          //]]></script>
+  
+
+  <br/>
+  <footer>
+    <a href="../../index.html" class="colorFooter">Tarea creada por Manuel Monterroso Flores</a>
+  </footer>
+  
+</body>
+</html>
+
+
+
